@@ -10,6 +10,7 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     padding: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .cv-container {
@@ -77,6 +78,25 @@ body {
     padding: 8px 20px;
     border-radius: 25px;
     display: inline-block;
+}
+
+/* LTR header layout for personal details in one row */
+html:not([dir="rtl"]) .header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+html:not([dir="rtl"]) .name {
+    width: 100%;
+    margin-bottom: 10px;
+}
+html:not([dir="rtl"]) .birth-year {
+    display: inline-flex;
+    margin: 0;
+    font-size: 0.9em;
+    padding: 6px 12px;
 }
 
 .contact-info {
@@ -212,6 +232,43 @@ html:not([dir="rtl"]) .certifications-list li::before {
 html:not([dir="rtl"]) .certifications-list li {
     padding-left: 50px;
     padding-right: 20px;
+}
+html:not([dir="rtl"]) .contact-info {
+    flex-wrap: nowrap;
+    gap: 15px;
+}
+html:not([dir="rtl"]) .contact-item {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+/* RTL header layout for personal details in one row */
+html[dir="rtl"] .header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+html[dir="rtl"] .name {
+    width: 100%;
+    margin-bottom: 10px;
+}
+html[dir="rtl"] .birth-year {
+    display: inline-flex;
+    margin: 0;
+    font-size: 0.9em;
+    padding: 6px 12px;
+}
+html[dir="rtl"] .contact-info {
+    flex-wrap: nowrap;
+    gap: 15px;
+}
+html[dir="rtl"] .contact-item {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    white-space: nowrap;
 }
 
 .experience-item {
@@ -478,13 +535,89 @@ html:not([dir="rtl"]) .certifications-list li {
     }
 }
 
-.decorative-element {
+/* Homepage container */
+.home-container {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+    padding: 60px 40px;
+    position: relative;
+    overflow: hidden;
+    margin: 80px auto;
+    max-width: 800px;
+    text-align: center;
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+.home-container::before {
+    content: '';
     position: absolute;
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(45deg, rgba(52, 152, 219, 0.1), rgba(231, 76, 60, 0.1));
+    width: 200px;
+    height: 200px;
+    background: rgba(102,126,234,0.3);
     border-radius: 50%;
-    top: 20px;
-    left: 20px;
-    z-index: 0;
+    top: -50px;
+    left: -50px;
+}
+.home-container::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(118,75,162,0.3);
+    border-radius: 50%;
+    bottom: -100px;
+    right: -100px;
+}
+.home-container h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #2c3e50;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.home-container p {
+    font-size: 1.1em;
+    margin-bottom: 40px;
+    color: #555;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Stylish gradient buttons */
+.btn {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 14px 28px;
+    font-size: 1em;
+    color: #fff;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+    background: linear-gradient(135deg, #764ba2, #667eea);
+}
+
+/* Ensure SVG accent is appropriately sized and positioned */
+.decorative-svg {
+    width: 150px;
+    height: 150px;
+    opacity: 0.1;
 }

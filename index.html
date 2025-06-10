@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    <meta name="description" content="Mostafa Magdy - Professional Painter & Visual Artist">
+    <title>Mostafa Magdy - Professional Painter</title>
+    <link rel="stylesheet" href="artistic-styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="artist-canvas">
+        <!-- Floating paint splashes -->
+        <div class="paint-splash splash1"></div>
+        <div class="paint-splash splash2"></div>
+        <div class="paint-splash splash3"></div>
+        <div class="paint-splash splash4"></div>
+        
+        <!-- Artistic geometric shapes -->
+        <div class="geo-shape triangle"></div>
+        <div class="geo-shape circle"></div>
+        <div class="geo-shape square"></div>
+          <!-- Main content -->
+        <div class="artist-profile">
+            <div class="profile-content">
+                <div class="artist-badge">Professional Painter</div>
+                <h1 class="artist-name">
+                    <span class="name-first">Mostafa</span>
+                    <span class="name-last">Magdy</span>
+                </h1>
+                <p class="artist-bio">
+                    Professional <span class="highlight">painter</span> and <span class="highlight">visual artist</span> 
+                    specializing in wall murals, custom portraits, and traditional canvas painting. 
+                    Bringing spaces and memories to life through creative artistry and vibrant colors.
+                </p>
+                
+                <div class="portfolio-actions">
+                    <a href="Mostafa_Magdy_CV_Stylish.html" class="portfolio-btn primary">
+                        <span class="btn-icon">📄</span>
+                        <span class="btn-text">English CV</span>
+                    </a>
+                    <a href="Mostafa_Magdy_CV_Arabic_Stylish.html" class="portfolio-btn secondary">
+                        <span class="btn-icon">📋</span>
+                        <span class="btn-text">السيرة الذاتية</span>
+                    </a>
+                </div>
+                  <!-- Creative skills showcase -->
+                <div class="skills-preview">
+                    <div class="skill-bubble">Wall Murals</div>
+                    <div class="skill-bubble">Portrait Painting</div>
+                    <div class="skill-bubble">Canvas Art</div>
+                    <div class="skill-bubble">Traditional Painting</div>
+                </div>
+            </div>
+            
+            <!-- Artist tools decoration -->
+            <div class="tools-decoration">
+                <div class="tool brush"></div>
+                <div class="tool pencil"></div>
+                <div class="tool palette"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Animated background elements -->
+    <script>
+        // Subtle animation for paint splashes
+        document.querySelectorAll('.paint-splash').forEach((splash, index) => {
+            setTimeout(() => {
+                splash.style.animation = `float ${3 + index}s ease-in-out infinite alternate`;
+            }, index * 500);
+        });
+    </script>
+</body>
+</html>
