@@ -10,7 +10,7 @@ body {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
     padding: 20px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
 .cv-container {
@@ -89,6 +89,7 @@ html:not([dir="rtl"]) .header {
     gap: 15px;
 }
 html:not([dir="rtl"]) .name {
+    font-family: 'Cinzel', serif;
     width: 100%;
     margin-bottom: 10px;
 }
@@ -143,6 +144,7 @@ html:not([dir="rtl"]) .birth-year {
 }
 
 .section-title {
+    font-family: 'Cinzel', serif;
     font-size: 1.6em;
     font-weight: 700;
     color: #2c3e50;
@@ -291,6 +293,7 @@ html[dir="rtl"] .contact-item {
 }
 
 .job-title {
+    font-family: 'Cinzel', serif;
     font-size: 1.3em;
     font-weight: 600;
     color: #2c3e50;
@@ -333,10 +336,11 @@ html[dir="rtl"] .contact-item {
 }
 
 .degree {
+    font-family: 'Inter', sans-serif;
     font-weight: 600;
     color: #2c3e50;
     margin-bottom: 8px;
-    font-size: 1.1em;
+    font-size: 1em;
 }
 
 .institution {
